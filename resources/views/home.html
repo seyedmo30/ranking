@@ -1,0 +1,88 @@
+@extends('layouts.main')
+
+@section('stylemin')
+
+
+  div.about{
+			 width:75%;
+  }
+
+@endsection
+
+@section('stylemax')
+
+
+
+
+
+@endsection
+
+@section('index')
+
+<br>
+      <div  style="float:left;"  class="about w3-container w3-card w3-white w3-round w3-margin"><br>
+        <span class="w3-right w3-opacity">  {{ Auth::user()->name }} </span>
+        <br>
+        <hr class="w3-clear">
+        <p>در صفحه ی شخصی ، می توانید به آهنگ های مورد علاقه خود، رای بدهید</p>
+        <p style=" font-style:44px;">خواننsddsده ی مورد نظر را انتخاب کنید</p>
+
+      </div>
+
+<div class="w3-main w3-content
+ w3-padding" style="max-width:1200px;margin-top:70px">
+
+  <div class="w3-row-padding w3-padding-16 w3-center" id="food">
+    <div class="w3-quarter">
+      <img src="image/dariush.jpg" alt="Sandwich" style="width:70%">
+      <h3>اِبی </h3>
+      <p>ابراهیم حامدی که طر دارانش او را آقای صدا، ابی، سلطان صدا می نامند	</p>
+    </div>
+    <div class="w3-quarter">
+      <img src="image/hayedeh.jpg" alt="Steak" style="width:70%">
+      <h3>هایده</h3>
+      <p>Once again, some random text to lorem lorem lorem lorem ipsum text praesent tincidunt ipsum lipsum.</p>
+    </div>
+    <div class="w3-quarter">
+      <img src="image/ebi.jpg" alt="Cherries" style="width:70%">
+      <h3>Cherries, interrupted</h3>
+      <p>Lorem ipsum text praesent tincidunt ipsum lipsum.</p>
+      <p>What else?</p>
+    </div>
+<!-- Sidebar/menu -->
+
+  </div>
+  </div>
+
+
+      <div  style="float:left;"  class="about w3-container w3-card w3-white w3-round w3-margin"><br>
+        <span class="w3-right w3-opacity">سید مصطفی حسینی</span>
+        <br>
+        <hr class="w3-clear">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+      </div>
+
+
+@endsection
+
+@section('indexx')
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card">
+                <div class="card-header">Dsalamrd</div>
+
+                <div class="card-body">
+                    @if (session('status'))
+                        <div class="alert alert-success" role="alert">
+                            {{ session('status') }}
+                        </div>
+                    @endif
+
+                    You are logged in!
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+@endsection
